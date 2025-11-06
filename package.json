@@ -1,0 +1,13 @@
+{
+	"name": "rc-chat",
+	"version": "1.0.0",
+	"workspaces": [
+		"packages/*",
+		"apps/*"
+	],
+	"scripts": {
+		"dev": "bun --bun run --workspaces dev",
+		"build": "bun --bun run --filter packages/frontend build",
+		"start": "bun --bun run --filter packages/backend start"
+	}
+}
