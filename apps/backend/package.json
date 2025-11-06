@@ -1,13 +1,17 @@
 {
-  "name": "backend",
+  "name": "@rc-chat/backend",
   "scripts": {
     "dev": "bun --bun run --hot src/index.ts",
     "start": "bun --bun run src/index.ts"
   },
   "dependencies": {
+    "@rc-chat/shared": "workspace:*",
+    "better-sqlite3": "^12.4.1",
+    "drizzle-orm": "^0.44.7",
     "hono": "^4.10.4"
   },
   "devDependencies": {
-    "@types/bun": "latest"
+    "@types/bun": "^1.3.1",
+    "drizzle-kit": "^0.31.6"
   }
 }

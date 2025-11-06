@@ -1,5 +1,5 @@
 {
-  "name": "frontend",
+  "name": "@rc-chat/frontend",
   "private": true,
   "type": "module",
   "scripts": {

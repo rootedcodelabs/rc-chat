@@ -1,9 +1,18 @@
 import { Hono } from 'hono'
+import { db } from "../lib/utils/db"
+import { api } from "./api/api"
 
-const app = new Hono()
+const app = new Hono();
 
-app.get('/', (c) => {
-  return c.text('Hello Hono!')
+app.get('/', async (c) => {
+		let users = await db.query.usersTable.findMany().then((users) => users);
+
+		if (!users) {
+			return c.json({ "message": "No users found" });
+		}
+
+			return c.json(users);
 })
 
-export default app
+app.route("/api", api);
+export default app;

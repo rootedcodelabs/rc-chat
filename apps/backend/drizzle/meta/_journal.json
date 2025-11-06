@@ -1,0 +1,13 @@
+{
+  "version": "7",
+  "dialect": "sqlite",
+  "entries": [
+    {
+      "idx": 0,
+      "version": "6",
+      "when": 1762406289310,
+      "tag": "0000_gigantic_firedrake",
+      "breakpoints": true
+    }
+  ]
+}
