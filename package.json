@@ -7,7 +7,7 @@
 	],
 	"scripts": {
 		"dev": "bun --bun run --workspaces dev",
-		"build": "bun --bun run --filter packages/frontend build",
-		"start": "bun --bun run --filter packages/backend start"
+		"build": "bun --bun run --filter @rc-chat/frontend build",
+		"start": "NODE_ENV=production bun --bun run --filter @rc-chat/backend start"
 	}
 }
