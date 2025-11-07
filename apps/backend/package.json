@@ -4,7 +4,8 @@
     "dev": "bun --bun run --hot src/server.ts",
     "start": "bun --bun run src/server.ts",
     "db:generate": "drizzle-kit generate",
-    "db:migrate": "bun --bun run lib/utils/migrate.ts"
+    "db:migrate": "bun --bun run lib/utils/migrate.ts",
+    "clean": "rm -rf node_modules public drizzle"
   },
   "dependencies": {
     "@rc-chat/shared": "workspace:*",
