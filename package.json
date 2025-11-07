@@ -6,7 +6,7 @@
 		"apps/*"
 	],
 	"scripts": {
-		"dev": "bun --bun run --workspaces dev",
+		"dev": "bun --bun run --filter './apps/**' dev",
 		"prod": "bun install && bun run build && bun run db:setup && bun run start",
 		"build": "bun --bun run --filter @rc-chat/frontend build",
 		"start": "NODE_ENV=production bun --bun run --filter @rc-chat/backend start",

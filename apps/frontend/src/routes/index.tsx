@@ -2,6 +2,10 @@ import { createFileRoute } from '@tanstack/react-router'
 import logo from '../logo.svg'
 
 export const Route = createFileRoute('/')({
+  beforeLoad: async () => {
+    const session = await fetch('/api/auth/session').then((res) => res.json())
+    session ? console.log(session) : console.log('Not logged in');
+  },
   component: App,
 })
 
