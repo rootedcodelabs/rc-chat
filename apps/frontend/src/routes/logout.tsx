@@ -1,11 +1,10 @@
 import { createFileRoute, redirect } from '@tanstack/react-router'
+import { protectedMiddleware } from '@/lib/utils/protected.middleware'
 
 export const Route = createFileRoute('/logout')({
   beforeLoad: async () => {
-    const session = await fetch('/api/auth/session').then((res) => res.json())
-    if (session) {
-      await fetch('/api/auth/logout', { method: 'POST' })
-    }
+    await protectedMiddleware()
+    await fetch('/api/auth/logout', { method: 'POST' })
     throw redirect({
       to: '/login',
       replace: true,

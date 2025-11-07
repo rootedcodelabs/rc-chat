@@ -1,19 +1,9 @@
-import { createFileRoute, Link, redirect } from '@tanstack/react-router'
+import { createFileRoute, Link } from '@tanstack/react-router'
 import { useQueryClient, useMutation } from '@tanstack/react-query'
+import { protectedMiddleware } from '@/lib/utils/protected.middleware'
 
 export const Route = createFileRoute('/signup')({
-  beforeLoad: async () => {
-    const session = await fetch('/api/auth/session').then((res) => res.json())
-    console.log(session)
-    if (session) {
-      throw redirect({
-        to: '/',
-        search: {
-          redirect: location.href,
-        },
-      })
-    }
-  },
+  beforeLoad: protectedMiddleware,
   component: SignUpPage,
 })
 
