@@ -9,7 +9,8 @@
     "test": "vitest run",
     "lint": "eslint",
     "format": "prettier",
-    "check": "prettier --write . && eslint --fix"
+    "check": "prettier --write . && eslint --fix",
+    "clean": "rm -rf node_modules .tanstack"
   },
   "dependencies": {
     "@rc-chat/shared": "workspace:*",

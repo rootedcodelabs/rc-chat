@@ -5,7 +5,8 @@
   "type": "module",
   "private": true,
   "scripts": {
-    "generate": "bunx --bun @better-auth/cli generate --output ../../apps/backend/src/db/schema.ts"
+    "generate": "bunx --bun @better-auth/cli generate --output ../../apps/backend/src/db/schema.ts",
+    "clean": "rm -rf node_modules"
   },
   "devDependencies": {
     "@types/bun": "latest"
