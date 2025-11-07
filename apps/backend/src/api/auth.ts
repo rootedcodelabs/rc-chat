@@ -5,6 +5,10 @@ export const auth = new Hono();
 
 auth.basePath("/auth");
 
+auth.get("/signup", (c) => {
+	return c.json({ message: "Signup page" });
+})
+
 auth.post("/signup", async (c) => {
 	const { name, email, password } = await c.req.json();
 
