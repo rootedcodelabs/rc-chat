@@ -1,8 +1,8 @@
 {
   "name": "@rc-chat/backend",
   "scripts": {
-    "dev": "bun --bun run --hot src/index.ts",
-    "start": "bun --bun run src/index.ts",
+    "dev": "bun --bun run --hot src/server.ts",
+    "start": "bun --bun run src/server.ts",
     "db:generate": "drizzle-kit generate",
     "db:migrate": "bun --bun run lib/utils/migrate.ts"
   },

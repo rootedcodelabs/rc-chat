@@ -1,5 +1,4 @@
 import { Hono } from 'hono'
-import { db } from "../lib/utils/db"
 import { api } from "./api/api"
 import { serveStatic } from "hono/bun"
 
