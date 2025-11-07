@@ -1,12 +1,18 @@
 {
   "name": "@rc-chat/backend",
   "scripts": {
+<<<<<<< Updated upstream
     "dev": "bun --bun run --hot src/server.ts",
     "start": "bun --bun run src/server.ts"
+=======
+    "dev": "bun --bun run --hot src/index.ts",
+    "start": "bun --bun run src/index.ts",
+    "db:generate": "drizzle-kit generate",
+    "db:migrate": "bun --bun run lib/utils/migrate.ts"
+>>>>>>> Stashed changes
   },
   "dependencies": {
     "@rc-chat/shared": "workspace:*",
-    "better-sqlite3": "^12.4.1",
     "drizzle-orm": "^0.44.7",
     "hono": "^4.10.4"
   },
