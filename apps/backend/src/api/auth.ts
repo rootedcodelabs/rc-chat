@@ -24,3 +24,18 @@ auth.post("/signup", async (c) => {
 
 	return response;
 });
+
+auth.post("/login", async (c) => {
+	const { email, password } = await c.req.json();
+
+	const response = await ext_auth.api.signInEmail({
+		body: {
+			email,
+			password,
+			callbackURL: "/"
+		},
+		asResponse: true
+	})
+
+	return response;
+})
