@@ -9,6 +9,7 @@
 		"dev": "bun --bun run --workspaces dev",
 		"build": "bun --bun run --filter @rc-chat/frontend build",
 		"start": "NODE_ENV=production bun --bun run --filter @rc-chat/backend start",
-		"clean": "rm -rf node_modules && bun --bun run --workspaces clean"
+		"clean": "rm -rf node_modules && bun --bun run --workspaces clean",
+		"db:setup": "bun --bun run --filter @rc-chat/shared generate && bun --bun run --filter @rc-chat/backend db:generate && bun --bun run --filter @rc-chat/backend db:migrate"
 	}
 }
